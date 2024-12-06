@@ -94,8 +94,7 @@ gatk VariantsToTable \
 # MANIPULATION OF FILES TO GENERATE A TSV FILE
 
 cat analysis_ready_snps_filteredGT_funcotated.vcf | grep "Funcotation fields are:" | sed 's+|+\t+g' > output_curated_variant.txt
-cat output_snps.table | cut -f5 | grep "NBPF1" | sed 's+|+\t+g' >> output_snps.table 
-
+cat output_snps.table | cut -f5 | grep "NBPF1" | sed 's+|+\t+g' >> output_curated_variant.txt
 #can be carried out for both snps or indels
 
 
